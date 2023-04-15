@@ -1,0 +1,390 @@
+:root {  
+    --purple: rgb(123, 31, 162);
+    --violet: rgb(103, 58, 183);
+    --pink: rgb(244, 143, 177);
+
+    --black: #333333;
+    --red: #dd1818;
+  }
+  
+
+
+*{
+    cursor: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+    overflow-x: hidden;
+}
+.circle {
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  border: none;
+  position: fixed; 
+  pointer-events: none;
+  z-index: 10; /* so that it stays on top of all other elements */
+
+  transition: all 0.3s ease;
+  transition-property: transform, width, height;
+  transform-origin: 100%;
+}
+
+nav{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    min-height: 8vh;
+    align-items: center;
+}
+
+.nav-links{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-links li{
+    padding: 1rem;
+    z-index: 20;
+}
+
+.nav-links, h1 {
+    flex: 1;
+}
+
+.link-grow{
+    height: 20px;
+    width: 30px;
+    transform: scale(3);
+}
+
+.hovered-link{
+    color: white;
+}
+
+
+
+
+.landing {
+    width: 90vw;
+    height: 92vh;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.intro-text {
+    font-weight: 500;
+    font-size: 8.5vw;
+    color: rgb(200, 200, 200);
+    width: auto;
+
+    margin-top: -8vh;
+}
+
+@keyframes background-pan {
+    from {
+      background-position: 0% center;
+    }
+    
+    to {
+      background-position: -200% center;
+    }
+  }
+
+.intro-text:hover {
+    font-weight: 600;
+    animation: background-pan 3s linear infinite;
+    background: linear-gradient(
+      to right,
+      var(--purple),
+      var(--violet),
+      var(--pink),
+      var(--purple)
+    );
+    background-size: 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    white-space: nowrap;
+  }
+
+.description-text {
+    font-weight: 500;
+    font-size: 3.5vw;
+    color: rgb(9, 9, 9);
+    line-height: 1.5;
+    text-align: justify;
+}
+
+.about-section {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-backdrop {
+  position: absolute;
+  font-size: 19.6vw;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  color: rgb(241, 241, 241);
+}
+
+.about {
+  width: 90vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-text {
+  font-size: 2vw;
+  margin-bottom: 5vh;
+  font-weight: 500;
+}
+
+.d-text {
+  font-weight: 700;
+  animation: background-pan 3s linear infinite;
+  background: linear-gradient(
+    to right,
+    var(--purple),
+    var(--violet),
+    var(--pink),
+    var(--purple)
+  );
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  white-space: nowrap;
+}
+.r-text {
+  font-weight: 700;
+  animation: background-pan 3s linear infinite;
+  background: linear-gradient(to right, var(--black), var(--red), var(--black));
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  white-space: nowrap;
+}
+
+.g-text {
+  font-weight: 700;
+  animation: background-pan 3s linear infinite;
+  background: linear-gradient(to right, #00467f, #a5cc82, #00467f);
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  white-space: nowrap;
+}
+
+
+
+.projects-section{
+  height: 100vh;
+  width: 100%;
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.projects-backrop {
+  position: absolute;
+  font-size: 20.5vw;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  color: rgb(241, 241, 241);
+}
+
+
+
+
+
+
+
+
+
+.contact-section{
+  height: 100vh;
+  width: 100%;
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+}
+
+.contact-backrop {
+  position: absolute;
+  font-size: 21.3vw;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  color: rgb(241, 241, 241);
+}
+
+.contact {
+  width: 90%;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.get-in-touch {
+  font-size: 10vw;
+  animation: background-pan 3s linear infinite;
+  background: linear-gradient(to right, #00467f, #a5cc82, #00467f);
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  white-space: nowrap;
+}
+
+
+/* FORM */
+.container{
+  width: 100%;
+}
+
+.container form .form-row{
+  display: flex;
+  margin: 32px 0;
+}
+.container form .form-row-submit{
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+}
+form .form-row .input-data{
+  width: 100%;
+  height: 50px;
+  margin: 0 20px;
+  position: relative;
+}
+form .form-row-submit .input-data{
+  width: 100%;
+  height: 50px;
+  margin: 0 20px;
+  position: relative;
+}
+form .form-row .textarea{
+  height: 80px;
+  overflow: hidden;
+  position: relative;
+}
+.input-data input,
+.textarea textarea{
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: none;
+  font-size: 17px;
+  border-bottom: 2px solid rgba(0,0,0, 0.12);
+  background: none;
+  
+}
+.input-data input:focus ~ label, .textarea textarea:focus ~ label,
+.input-data input:valid ~ label, .textarea textarea:valid ~ label{
+  transform: translateY(-20px);
+  font-size: 14px;
+  color: #3498db;
+  border: red;
+}
+.textarea textarea{
+  resize: none;
+  padding-top: 10px;
+}
+.input-data label{
+  position: absolute;
+  pointer-events: none;
+  bottom: 10px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+.textarea label{
+  width: 100%;
+  bottom: 40px;
+  background: none;
+}
+.input-data .underline{
+  position: absolute;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+}
+.input-data .underline:before{
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 100%;
+  background: #3498db;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+.input-data input:focus ~ .underline:before,
+.input-data input:valid ~ .underline:before,
+.textarea textarea:focus ~ .underline:before,
+.textarea textarea:valid ~ .underline:before{
+  transform: scale(1);
+}
+.submit-btn .input-data{
+  overflow: hidden;
+  height: 45px!important;
+  width: 25%!important;
+}
+.submit-btn .input-data .inner{
+  height: 100%;
+  width: 300%;
+  position: absolute;
+  left: -100%;
+  background: -webkit-linear-gradient(right, var(--pink) , var(--purple), var(--pink) , var(--purple));
+  transition: all 0.4s;
+}
+.submit-btn .input-data:hover .inner{
+  left: 0;
+}
+.submit-btn .input-data input{
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+}
+@media (max-width: 700px) {
+  .container .text{
+    font-size: 30px;
+  }
+  .container form{
+    padding: 10px 0 0 0;
+  }
+  .container form .form-row{
+    display: block;
+  }
+  form .form-row .input-data{
+    margin: 10px 0!important;
+  }
+  .submit-btn .input-data{
+    width: 40%!important;
+  }
+}
