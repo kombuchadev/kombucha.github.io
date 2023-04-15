@@ -51,10 +51,8 @@ console.log(topCursor)
 navLinks.forEach(link => {
     link.addEventListener('mouseover', () => {
         topCursor.classList.add("link-grow");
-        link.classList.add("hovered-link");
     });
     link.addEventListener('mouseleave', () => {
         topCursor.classList.remove("link-grow");
-        link.classList.remove("hovered-link");
     });
 })
